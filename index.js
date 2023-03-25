@@ -106,7 +106,7 @@ function addDepartment() {
             }
         ])
         .then((data) => {
-            connection.query(`INSERT INTO db.department (department_id , department_name) VALUES ('${uuidv4()}' , '${data.name}')`, (err, res) => {
+            connection.query(`INSERT INTO db.department (department_id , department_name) VALUES ('${uuid()}' , '${data.name}')`, (err, res) => {
                 if (err) throw err
                 menu()
             })
